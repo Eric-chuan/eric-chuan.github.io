@@ -1,10 +1,4 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
-
-gem "jekyll", "~> 4.3.1"
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5"
 
 gem "jekyll-theme-chirpy", "~> 5.6", ">= 5.6.1"
 
@@ -22,13 +16,6 @@ end
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
-# Jekyll <= 4.2.0 compatibility with Ruby 3.0
-gem "webrick", "~> 1.7"
-
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-end
-
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
@@ -37,5 +24,3 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 if RUBY_PLATFORM =~ /linux-musl/
   gem "jekyll-sass-converter", "~> 2.0"
 end
-
-gem 'jekyll-compose', group: [:jekyll_plugins]
